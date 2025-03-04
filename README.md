@@ -26,8 +26,8 @@ PixelMorph is a powerful, browser-based image format converter that allows you t
 
 ## 📸 Screenshots
 
-![PixelMorph Landing Page](https://via.placeholder.com/800x450.png?text=PixelMorph+Landing+Page)
-![Conversion Interface](https://via.placeholder.com/800x450.png?text=Conversion+Interface)
+![PixelMorph Landing Page](/screenshots/screenshot1.png)
+![Conversion Interface](/screenshots/screenshot2.png)
 
 ## 🛠️ Technologies Used
 
