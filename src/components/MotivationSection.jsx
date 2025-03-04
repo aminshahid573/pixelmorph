@@ -51,7 +51,7 @@ const MotivationSection = () => {
         
         <div className="github-link-wrapper">
           <a 
-            href="https://github.com/yourusername/pixelmorph" 
+            href="https://github.com/aminshahid573/pixelmorph" 
             target="_blank" 
             rel="noopener noreferrer"
             className="github-link"

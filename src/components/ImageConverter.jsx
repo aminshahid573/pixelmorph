@@ -261,7 +261,7 @@ const ImageConverter = () => {
         <h2 className="conversion-title">
           {from.toUpperCase()} to {to.toUpperCase()} Converter
         </h2>
-        <div>demo</div>
+        
       </div>
 
       <div className="input-section">

@@ -22,7 +22,7 @@ PixelMorph is a powerful, browser-based image format converter that allows you t
 
 ## 🚀 Live Demo
 
-[View Live Demo](#) *(Add your deployment URL here)*
+[View Live Demo](#) *(deployment url (soon))*
 
 ## 📸 Screenshots
 
