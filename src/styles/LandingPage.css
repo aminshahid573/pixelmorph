@@ -1,0 +1,112 @@
+.landing-container {
+  width: 100%;
+  max-width: 1200px; /* Increased from 1000px for more flexibility */
+  margin: 0 auto;
+  padding: 0 15px; /* Added padding to prevent potential edge issues */
+}
+
+.conversion-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%; /* Ensure full width */
+}
+
+.conversion-tile {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: -3px 4px 10px 5px lightgray;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.conversion-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: #f0f4ff;
+}
+
+.tile-content {
+  text-align: center;
+}
+
+.format-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.format-icon {
+  background-color: #4a6cf7;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.arrow {
+  margin: 0 10px;
+  font-size: 20px;
+  color: #666;
+}
+
+.conversion-tile h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+.gradient-div {
+  background: linear-gradient(to right, #4286f4, #373B44);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gradient-div:hover {
+  transform: translateY(-2px);
+}
+
+.gradient-div p {
+  color: white;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .conversion-tile {
+    background-color: #2a2a2a;
+  }
+
+  .conversion-tile:hover {
+    background-color: #333344;
+  }
+
+  .conversion-tile h3 {
+    color: #f1f1f1;
+  }
+
+  .arrow {
+    color: #ccc;
+  }
+}
+
+@media (max-width: 600px) {
+  .conversion-tiles {
+    grid-template-columns: 1fr;
+  }
+}
