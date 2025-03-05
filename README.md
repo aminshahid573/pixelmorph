@@ -7,18 +7,32 @@
 
 ## 🖼️ Overview
 
-PixelMorph is a powerful, browser-based image format converter that allows you to easily transform images between SVG, PNG, JPEG/JPG, and ICO formats. Built with React and modern web technologies, PixelMorph provides a seamless conversion experience with an intuitive user interface.
+PixelMorph is a powerful, browser-based image format converter that supports a wide range of formats including SVG, PNG, JPEG/JPG, ICO, WebP, BMP, TIFF, GIF, and PDF. Built with React and modern web technologies, PixelMorph provides a seamless conversion experience with an intuitive user interface.
 
 ## ✨ Features
 
-- **Multiple Format Support**: Convert between SVG, PNG, JPEG/JPG, and ICO formats
-- **Customizable Dimensions**: Adjust width and height with interactive sliders
-- **Aspect Ratio Preservation**: Maintain proportions with aspect ratio lock
+- **Comprehensive Format Support**: Convert between multiple formats:
+  - SVG to PNG, JPG, ICO, WebP, BMP, TIFF, GIF, PDF
+  - PNG to JPG, ICO, WebP, BMP, TIFF, GIF, PDF
+  - JPG to PNG, ICO, WebP, BMP, TIFF, GIF, PDF
+  - ICO to PNG, JPG, WebP, BMP, TIFF
+  - WebP to PNG, JPG, ICO, BMP, TIFF
+  - BMP to PNG, JPG, ICO, WebP, TIFF, GIF, PDF
+  - TIFF to PNG, JPG, ICO, WebP, BMP, GIF, PDF
+  - GIF to PNG, JPG, ICO, WebP, BMP, TIFF, PDF
+  - PDF to PNG, JPG, ICO, WebP, BMP, TIFF, GIF
+- **Advanced Image Controls**:
+  - Customizable dimensions with interactive sliders
+  - Image quality adjustment
+  - Rotation control
+  - Background color customization
+  - Aspect ratio preservation
+- **Drag & Drop Support**: Easy file uploading with drag and drop functionality
 - **Real-time Preview**: See your image before and after conversion
-- **Batch Processing**: Convert multiple images in succession
 - **No Server Uploads**: All processing happens locally in your browser for privacy
 - **Responsive Design**: Works on desktop and mobile devices
 - **Dark Mode Support**: Comfortable viewing in any lighting condition
+- **Batch Processing**: Convert multiple images in succession
 
 ## 🚀 Live Demo
 
@@ -27,7 +41,8 @@ PixelMorph is a powerful, browser-based image format converter that allows you t
 ## 📸 Screenshots
 
 ![PixelMorph Landing Page](/screenshots/screenshot1.png)
-![Conversion Interface](/screenshots/screenshot2.png)
+![PixelMorph Landing Page](/screenshots/screenshot2.png)
+![Conversion Interface](/screenshots/screenshot3.png)
 
 ## 🛠️ Technologies Used
 
@@ -35,6 +50,9 @@ PixelMorph is a powerful, browser-based image format converter that allows you t
 - **React Router**: Navigation and routing
 - **File-Saver**: Client-side file saving functionality
 - **HTML5 Canvas API**: Image processing and manipulation
+- **jsPDF**: PDF generation and handling
+- **React Colorful**: Color picker component
+- **React Dropzone**: Drag and drop functionality
 - **CSS3**: Styling and responsive design
 - **Vite**: Fast development and optimized builds
 
@@ -73,11 +91,17 @@ PixelMorph is a powerful, browser-based image format converter that allows you t
 
 ## 🔍 How to Use
 
-1. **Select Conversion Type**: Choose the conversion you want to perform from the landing page (e.g., SVG to PNG, JPG to ICO)
-2. **Upload Image**: Click the upload button to select your source image
-3. **Adjust Settings**: Modify dimensions and other settings as needed
+1. **Select Conversion Type**: Choose from the wide range of conversion options on the landing page
+2. **Upload Image**: Either drag & drop your image or click to select
+3. **Customize Output**:
+   - Adjust dimensions using sliders or input fields
+   - Set image quality (1-100%)
+   - Rotate the image (0-360 degrees)
+   - Choose background color
+   - Toggle aspect ratio preservation
 4. **Convert**: Click the convert button to process your image
-5. **Download**: After conversion, click the download button to save your new image
+5. **Preview**: Review the converted image in real-time
+6. **Download**: Click the download button to save your converted image
 
 ## 📦 Building for Production
 
@@ -119,6 +143,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Vite](https://vitejs.dev/) - Build Tool
 - [File-Saver](https://github.com/eligrey/FileSaver.js/) - Client-side file saving
 - [React Router](https://reactrouter.com/) - Routing library
+- [jsPDF](https://github.com/parallax/jsPDF) - PDF generation
+- [React Colorful](https://github.com/omgovich/react-colorful) - Color picker
+- [React Dropzone](https://github.com/react-dropzone/react-dropzone) - Drag & drop
 
 ## 📞 Contact
 
