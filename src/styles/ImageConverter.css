@@ -8,14 +8,12 @@
   padding: 20px;
   background-color: #f8f9fa;
   border-radius: 8px;
-  box-shadow: -3px 4px 20px 12px lightgray;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 
 .converter-header {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   margin-bottom: 10px;
 }
 
@@ -43,42 +41,30 @@
   text-align: center;
 }
 
+.dropzone {
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: #fafafa;
+}
+
+.dropzone.active {
+  border-color: #4a6cf7;
+  background-color: #f0f4ff;
+}
+
+.dropzone p {
+  margin: 0;
+  color: #666;
+}
+
 .input-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.file-input-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.file-input {
-  display: none;
-}
-
-.file-input-label {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4a6cf7;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s;
-}
-
-.file-input-label:hover {
-  background-color: #3a5ce5;
-}
-
-.file-info {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #555;
 }
 
 .conversion-options {
@@ -112,6 +98,30 @@
 
 .checkbox-label input {
   margin: 0;
+}
+
+.color-picker-container {
+  position: relative;
+}
+
+.color-preview {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  border: 2px solid #ddd;
+  cursor: pointer;
+}
+
+.color-picker-popover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  margin-top: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .select-input,
@@ -217,6 +227,14 @@
   object-fit: contain;
 }
 
+.pdf-preview {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #666;
+}
+
 .no-preview {
   color: #999;
   font-size: 1rem;
@@ -254,10 +272,6 @@
     color: #ddd;
   }
   
-  .file-info {
-    color: #ccc;
-  }
-  
   .preview-section h3 {
     color: #ddd;
   }
@@ -283,17 +297,33 @@
     background: #555;
   }
   
-  .slider-input::-webkit-slider-thumb {
-    background: #4a6cf7;
+  .dropzone {
+    background-color: #2a2a2a;
+    border-color: #555;
   }
   
-  .slider-input::-moz-range-thumb {
-    background: #4a6cf7;
+  .dropzone.active {
+    background-color: #333344;
+    border-color: #4a6cf7;
+  }
+  
+  .dropzone p {
+    color: #ccc;
+  }
+  
+  .pdf-preview {
+    background-color: #333;
+    border-color: #555;
+    color: #ccc;
   }
 }
 
 @media (max-width: 600px) {
   .conversion-options {
     grid-template-columns: 1fr;
+  }
+  
+  .converter-container {
+    padding: 10px;
   }
 }

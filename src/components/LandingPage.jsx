@@ -1,20 +1,41 @@
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import FormatSearch from './FormatSearch'
 import '../styles/LandingPage.css'
 
 const LandingPage = () => {
   const navigate = useNavigate()
 
-  const conversionOptions = [
-    { from: 'svg', to: 'png', title: 'SVG to PNG' },
-    { from: 'svg', to: 'jpg', title: 'SVG to JPG' },
-    { from: 'svg', to: 'ico', title: 'SVG to ICO' },
-    { from: 'png', to: 'jpg', title: 'PNG to JPG' },
-    { from: 'png', to: 'svg', title: 'PNG to SVG' },
-    { from: 'png', to: 'ico', title: 'PNG to ICO' },
-    { from: 'jpg', to: 'png', title: 'JPG to PNG' },
-    { from: 'jpg', to: 'svg', title: 'JPG to SVG' },
-    { from: 'jpg', to: 'ico', title: 'JPG to ICO' }
-  ]
+  const formats = ['svg', 'png', 'jpg', 'ico', 'webp', 'bmp', 'tiff', 'gif', 'pdf']
+  
+  const [filteredConversions, setFilteredConversions] = useState(
+    formats.flatMap(from => 
+      formats.filter(to => from !== to).map(to => ({
+        from,
+        to,
+        title: `${from.toUpperCase()} to ${to.toUpperCase()}`
+      }))
+    )
+  )
+
+  const handleFilterChange = ({ fromFormat, toFormat, searchTerm }) => {
+    const filtered = formats.flatMap(from => 
+      formats.filter(to => from !== to).map(to => ({
+        from,
+        to,
+        title: `${from.toUpperCase()} to ${to.toUpperCase()}`
+      }))
+    ).filter(option => {
+      const matchFromFormat = !fromFormat || option.from === fromFormat
+      const matchToFormat = !toFormat || option.to === toFormat
+      const matchSearchTerm = !searchTerm || 
+        option.title.toLowerCase().includes(searchTerm.toLowerCase())
+      
+      return matchFromFormat && matchToFormat && matchSearchTerm
+    })
+
+    setFilteredConversions(filtered)
+  }
 
   const handleTileClick = (from, to) => {
     navigate(`/convert/${from}/${to}`)
@@ -22,11 +43,19 @@ const LandingPage = () => {
 
   return (
     <div className="landing-container">
-      <div className="gradient-div">
-      <p >If PixelMorph saved you time, show some love with a star! ⭐</p>
-      </div>
+      <FormatSearch 
+        formats={formats} 
+        onFilterChange={handleFilterChange} 
+      />
+      
+      <a target='_blank' href='https://github.com/aminshahid573/pixelmorph'>
+        <div className="gradient-div">
+          <p>If PixelMorph saved you time, show some love with a star! ⭐</p>
+        </div>
+      </a>
+      
       <div className="conversion-tiles">
-        {conversionOptions.map((option, index) => (
+        {filteredConversions.map((option, index) => (
           <div 
             key={index} 
             className="conversion-tile"

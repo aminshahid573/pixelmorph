@@ -21,7 +21,7 @@ function App() {
     <div className="app-container">
       <h1>PixelMorph</h1>
       <p className="description">
-        Convert between SVG, PNG, JPEG/JPG, and ICO formats
+        Convert between SVG, PNG, JPEG/JPG, WEBP, BMP, TIFF, GIF, PDF and ICO formats
       </p>
       <Routes>
         <Route path="/" element={<LandingPage />} />
